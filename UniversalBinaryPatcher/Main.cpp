@@ -87,8 +87,8 @@ std::vector<BYTE> processFile(const char* filename)
 {
 	// open the file:
 	std::streampos fileSize;
-	std::ifstream file(filename, std::ios::binary);
-	std::ofstream("backup.exe", std::ios_base::binary) << file.rdbuf();
+	std::ifstream file(filename, std::ios_base::binary);
+	std::ofstream("backup", std::ios_base::binary) << file.rdbuf();
 	std::cout << "File was successfuly backed up\n";
 
 	// get its size:
